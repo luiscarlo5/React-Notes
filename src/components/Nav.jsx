@@ -64,6 +64,27 @@ const Navcss = styled.nav`
             margin-top: -100px;
         }
     }
+    .boxteste0,.boxteste1, .boxteste2, .boxteste3, .boxteste4 {
+        transition: transform 0.4s ease; /* 0.5 segundos com easing */
+    }
+    .boxteste0:hover {
+        transform: skew(5deg, 5deg);
+    }
+    .boxteste1:hover {
+        transform: matrix(0,1,1,0,0,0);
+    }
+    .boxteste2:hover {
+        transform: scale(0.85);
+    }
+    .boxteste3:hover {
+        transform: rotate(-40deg);
+        
+    }
+    }
+    .boxteste4:hover {
+        transform: rotate(180deg);
+        
+    }
 }
   
 `;
@@ -80,15 +101,15 @@ const Nav = ({ nav_visible  }) => {
         <Navcss className={`${nav_visible} border-round-top border-round-2xl  md:flex-row lg:flex-column w-12 lg:w-1 lg:h-screen md:h-9rem  pb-0 max-w-screen m-0 lg:p-0 justify-content-center `} >
             
             <div className="fadeinleft animation-duration-200 animation-iteration-1 my_list_img overflow-x-auto md:overflow-x-auto lg:overflow-y-auto flex justify-content-center md:flex-row sm:flex-row lg:flex-column justify-content-around align-content-center gap-5 md:py-5 m-0 p-0 w-12 mg:h-6rem ">
-                <img  src={ImgHome} alt="imagem Home"         className="          block mx-auto   py-1  h-3rem w-auto  lg:w-7  lg:h-auto  md:h-4rem md:w-auto " />
-                <img  src={imgFlask} alt="imagem Flask"      onClick={() => mudar_id(0)} className="        block mx-auto   py-1  h-3rem w-auto  lg:w-7  lg:h-auto  md:h-4rem md:w-auto " />
-                <img  src={imgReact} alt="imagem React"      onClick={() => mudar_id(1)} className="        block mx-auto   py-1  h-3rem w-auto  lg:w-7  lg:h-auto  md:h-4rem md:w-auto " />
-                <img  src={imgNode}  alt="imagem Node js"    onClick={() => mudar_id(2)} className="      block mx-auto   py-1  h-3rem w-auto  lg:w-7  lg:h-auto  md:h-4rem md:w-auto " />
-                <img  src={imgMysql} alt="imagem MySQL"      onClick={() => mudar_id(3)} className="        block mx-auto   py-1  h-3rem w-auto  lg:w-7  lg:h-auto  md:h-4rem md:w-auto " />
-                <img  src={imgPostgre} alt="imagem Postgre"  onClick={() => mudar_id(4)} className="    block mx-auto   py-1  h-3rem w-auto  lg:w-7  lg:h-auto  md:h-4rem md:w-auto " />
-                <img  src={imgPyTorch} alt="imagem PyTorch"  onClick={() => mudar_id(5)} className="    block mx-auto   py-1  h-3rem w-auto  lg:w-7  lg:h-auto  md:h-4rem md:w-auto " />
-                <img  src={imgArduino} alt="imagem arduino"  onClick={() => mudar_id(6)} className="    block mx-auto   py-1  h-3rem w-auto  lg:w-7  lg:h-auto  md:h-4rem md:w-auto " />
-                <img  src={imgR} alt="imagem Estatistica em R" onClick={() => mudar_id(7)} className=" block mx-auto   py-1  h-3rem w-auto  lg:w-7  lg:h-auto  md:h-4rem md:w-auto " />
+                <img  src={ImgHome} alt="imagem Home"         className="     boxteste0     block mx-auto   py-1  h-3rem w-auto  lg:w-7  lg:h-auto  md:h-4rem md:w-auto " />
+                <img  src={imgFlask} alt="imagem Flask"      onClick={() => mudar_id(0)} className="   boxteste2  block mx-auto   py-1  h-3rem w-auto  lg:w-7  lg:h-auto  md:h-4rem md:w-auto " />
+                <img  src={imgReact} alt="imagem React"      onClick={() => mudar_id(1)} className="   boxteste1     block mx-auto   py-1  h-3rem w-auto  lg:w-7  lg:h-auto  md:h-4rem md:w-auto " />
+                <img  src={imgNode}  alt="imagem Node js"    onClick={() => mudar_id(2)} className="   boxteste2  block mx-auto   py-1  h-3rem w-auto  lg:w-7  lg:h-auto  md:h-4rem md:w-auto " />
+                <img  src={imgMysql} alt="imagem MySQL"      onClick={() => mudar_id(3)} className="   boxteste3  block mx-auto   py-1  h-3rem w-auto  lg:w-7  lg:h-auto  md:h-4rem md:w-auto " />
+                <img  src={imgPostgre} alt="imagem Postgre"  onClick={() => mudar_id(4)} className="   boxteste2  block mx-auto   py-1  h-3rem w-auto  lg:w-7  lg:h-auto  md:h-4rem md:w-auto " />
+                <img  src={imgPyTorch} alt="imagem PyTorch"  onClick={() => mudar_id(5)} className="   boxteste4 block mx-auto   py-1  h-3rem w-auto  lg:w-7  lg:h-auto  md:h-4rem md:w-auto " />
+                <img  src={imgR} alt="imagem Estatistica em R" onClick={() => mudar_id(7)} className=" boxteste2  block mx-auto   py-1  h-3rem w-auto  lg:w-7  lg:h-auto  md:h-4rem md:w-auto " />
+                <img  src={imgArduino} alt="imagem arduino"  onClick={() => mudar_id(6)} className="   boxteste4  block mx-auto   py-1  h-3rem w-auto  lg:w-7  lg:h-auto  md:h-4rem md:w-auto " />
             </div>
         </Navcss>
     
