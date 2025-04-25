@@ -21,5 +21,5 @@ Este é um aplicativo web desenvolvido com **React** para ajudar estudantes a or
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/studynotes.git
-   cd studynotes
+   git clone https://github.com/luiscarlo5/React-Notes.git
+   npm run dev
