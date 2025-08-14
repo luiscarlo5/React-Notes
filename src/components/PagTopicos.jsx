@@ -6,20 +6,6 @@ import dados from '../content/topicos.json';
 import styled from 'styled-components';
 import { NoteViewContext } from '../context/NoteContext';
 
-/*
-🧡 2. Elegante e suave (portfólio pessoal ou branding minimalista)
-Primária (laranja queimado): #D97706
-
-Bege claro (background): #FDF6EC
-
-Cinza suave: #A8A29E
-
-Texto: #3F3F46
-
-Detalhes/destaque: #FBBF24
-
-
-*/
 
 const SectionTopics= styled.section`
     margin: 0;
@@ -28,7 +14,7 @@ const SectionTopics= styled.section`
     height: 100%;
     color: white;
     border-color: var(--cyan-200);
-
+ 
 `
 export const PagTopicos = () =>{
     const {info_id} = useContext(NoteViewContext);
