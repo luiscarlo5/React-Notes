@@ -6,7 +6,7 @@ import dados from '../content/topicos.json';
 import styled from 'styled-components';
 import { NoteViewContext } from '../context/NoteContext';
 
-
+ 
 const SectionTopics= styled.section`
     margin: 0;
     padding: 0px;
