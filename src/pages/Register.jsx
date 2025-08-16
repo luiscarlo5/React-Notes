@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaUser, FaLock } from "react-icons/fa";
+import { FaUser, FaLock, HiUser } from "react-icons/fa";
 import styled from "styled-components";
 import "primeflex/primeflex.css";
 import imgLogin from "../assets/icons/account.png"
@@ -11,7 +11,7 @@ const SectionLogin = styled.section`
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #00030aff;
+    background-color: #001013ff;
 
 
   img{
@@ -23,7 +23,7 @@ const SectionLogin = styled.section`
     padding-left: -100px;
   }
   form {
-    background: rgba(35, 56, 110, 0.6);
+    background: rgba(50, 167, 69, 0.6);
     padding: 2rem;
     border-radius: 12px;
     display: flex;
@@ -68,7 +68,7 @@ const SectionLogin = styled.section`
   }
 
   button {
-    background-color: #0b96e7ff;
+    background-color: #0be73bff;
     color: white;
     border: none;
     border-radius: 8px;
@@ -105,7 +105,7 @@ const SectionLogin = styled.section`
 `;
 
 // Component
-const Login = () => {
+const Register = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -128,29 +128,43 @@ const Login = () => {
   return (
     
     <SectionLogin>
-        <div className="flex flex-wrap justify-content-center gap-2 mb-5 md:h-4 ">
-            <div className="flex w-12 justify-content-center h-4">
-                <img  src={imgLogin} alt="imagem login"   className="justify-content-center" />
-            </div>
-            <button type="submit" className="w-5 mx-4 button_mod">Login</button>
-            <button type="submit" className="w-5 mx-4 button_mod">Registrar</button>
-         </div>
+
 
         
       <form onSubmit={handleSubmit}>
        
        
-        <h1>Acesse o sistema</h1>
+        <h1>Seja Bem-Vindo </h1>
 
         {error && <div className="error-message">{error}</div>}
 
         <div className="input-group">
-          <FaUser className="icon" />
+          
+          <input
+            type="text"
+            placeholder="Nome"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+          />
+        </div>
+
+        <div className="input-group">
+          
           <input
             type="email"
             placeholder="E-mail"
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
+          />
+        </div>
+
+        <div className="input-group">
+          <FaLock className="icon" />
+          <input
+            type="password"
+            placeholder="Senha"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </div>
 
@@ -170,4 +184,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

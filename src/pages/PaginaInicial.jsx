@@ -6,12 +6,10 @@ import styled from "styled-components";
 import VideoEspaco from "../assets/videos/4kSpace.mp4"
 import { Button } from 'primereact/button';
 
-const SectionPagIni = styled.section`
-    .cor1 {
-        
-        
-    }
+import { useNavigate } from "react-router-dom"; // lib para mudar a pagina 
   
+
+const SectionPagIni = styled.section`
     #video1 {
 
         object-fit: cover;
@@ -28,37 +26,43 @@ const SectionPagIni = styled.section`
     Button:hover {
         transform: scale(0.95);
     }
-    
-
 
 `
 
 const PaginaInicial = () => {
+    const navigate = useNavigate();
+
+    const mudarCaminho = (caminho) => {
+        navigate(caminho);
+    };
+
+    const abrirLinkedin = () => {
+        window.open("https://www.linkedin.com/in/luis-carlos-eng-comp", "_blank"); // abre em nova aba
+    };
+
+    const abrirGithub = () => {
+        window.open("https://github.com/luiscarlo5", "_blank"); // abre em nova aba
+    };
+
     return ( 
         <SectionPagIni className="flex flex-wrap w-12 flex-columm m-0 p-10 h-screen w-screen">
             {/* Grande Imagem*/}
            
             <video src={VideoEspaco} autoPlay loop muted id="video1" className="    "/>
-           
-      
            <div className=" flex flex-column flex-wrap  cor1  align-items-center h-screen justify-content-center absolute px-auto mx-auto w-11 ">
 
-                 <h1 className="justify-content-center block">Anotar Estudos </h1>
-                 <h3>Bem-Vindo ao meu site feito para estudos</h3>
-                 
+                 <h1 className="justify-content-center block">Notes for Study</h1>
+                 <h3>Bem-Vindo ao meu site feito para estudos da área da tecnologia</h3>    
+                 <p>Aqui você poderá separar e organizar seus estudos por disciplina, tecnologia e área de maneira períodicamente</p>          
                  <nav className="flex flex-row lg:flex-row flex-column sm:flex-column  flex-wrap gap-5  ml-6  ">
-                    <Button label="Login"  />
+                    <Button label="Login"  onClick={() => mudarCaminho("/login")}/>
                     <Button label="Register"  />
-                    <Button label="Linkedin" />
-                    <Button label="GitHub" />
+                    <Button label="Linkedin" onClick={abrirLinkedin}/>
+                    <Button label="GitHub" onClick={abrirGithub} />
                  </nav>
            </div>
             
-            
-        
         </SectionPagIni>
-
-
      );
 }
  

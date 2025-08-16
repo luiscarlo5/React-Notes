@@ -50,14 +50,21 @@ const Main = () => {
             <div className={`flex flex-wrap flex-row lg:h-auto w-12 ${w_dinamico} md:w-100  m-0 px-0 py-0 bg-red-500`}>
                 <header className='flex flex-wrap flex-column h-3 w-12 m-0 p-0 align-content-center'>
                     <div className='flex flex-wrap flex-row justify-content-center align-content-center'>
-                        <Button className='block m-3 p-2 justify-content-center align-content-center hover:bg-black h-2rem w-2rem pi pi-list'onClick={mudar_visibilidade} label="" rounded />
+                        <Button 
+                                            icon="pi pi-list" 
+                                            onClick={mudar_visibilidade} 
+                                            className="m-3 p-2 justify-content-center align-content-center h-2rem w-2rem"
+                                            rounded 
+                                            style={{ backgroundColor: "rgb(0, 176, 219)", border: "none" }}
+                                        />
+                        
                         <h1 className=' m-3 mx-auto p-0 bg-blue-400'> Luis Carlos o fera   </h1>
                     </div>
-                    <h3 className='inline mx-auto h-min w-100'> ⏩ Bem Vindo ao meu Portfólio 🎃💻🎯 </h3>
+                    <h3 className='inline mx-auto h-min w-100'> ⏩ Bem Vindo ao seu campo de anotações de tecnologias</h3>
                 </header>
                 
-                <PagTopicos indice={0} />
-                <FuncInputNote />
+                <PagTopicos  />
+                <FuncInputNote  />
             </div>
         </SectionMain>
         
