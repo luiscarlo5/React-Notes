@@ -102,6 +102,11 @@ const SectionLogin = styled.section`
     font-size: 0.9rem;
     text-align: center;
   }
+
+  @media (max-width: 900px) {
+    height: 100%;
+    padding-bottom: 300px;
+  }
 `;
 
 // Component

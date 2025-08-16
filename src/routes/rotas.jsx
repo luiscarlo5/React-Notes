@@ -7,13 +7,13 @@ import Main from "../pages/Main";
 import Menu from "../pages/Menu";
 import PaginaInicial from "../pages/PaginaInicial";
 
-const PagsNav = () =>{
+const Rotas = () =>{
     return (
         
         <BrowserRouter>
             <Routes>
                 <Route path={"/"} element={ <PageLayout />}>
-                    <Route path={"/init"} element={  <PaginaInicial /> } />
+                    <Route path={"/"} element={  <PaginaInicial /> } />
                     <Route path={"/anotacoes_input"} element={  <Main /> } />
                     {/* <Route path={"/anotacoes_read"} element={  <Main /> } /> */}
                     <Route path={"/login"} element={  <Login /> } />
@@ -26,4 +26,4 @@ const PagsNav = () =>{
     );
 };
 
-export default PagsNav;
+export default Rotas;

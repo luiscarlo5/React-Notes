@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaUser, FaLock, HiUser } from "react-icons/fa";
+import { FaUser, FaLock } from "react-icons/fa";
 import styled from "styled-components";
 import "primeflex/primeflex.css";
 import imgLogin from "../assets/icons/account.png"

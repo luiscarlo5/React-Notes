@@ -27,6 +27,10 @@ const SectionPagIni = styled.section`
         transform: scale(0.95);
     }
 
+    .text {
+
+    }
+
 `
 
 const PaginaInicial = () => {
@@ -45,15 +49,15 @@ const PaginaInicial = () => {
     };
 
     return ( 
-        <SectionPagIni className="flex flex-wrap w-12 flex-columm m-0 p-10 h-screen w-screen">
+        <SectionPagIni className="flex flex-wrap w-12 flex-columm m-0 h-screen w-screen">
             {/* Grande Imagem*/}
            
             <video src={VideoEspaco} autoPlay loop muted id="video1" className="    "/>
            <div className=" flex flex-column flex-wrap  cor1  align-items-center h-screen justify-content-center absolute px-auto mx-auto w-11 ">
 
                  <h1 className="justify-content-center block">Notes for Study</h1>
-                 <h3>Bem-Vindo ao meu site feito para estudos da área da tecnologia</h3>    
-                 <p>Aqui você poderá separar e organizar seus estudos por disciplina, tecnologia e área de maneira períodicamente</p>          
+                 <h3 className="text-center">Bem-Vindo ao meu site feito para estudos <br></br>da área da tecnologia</h3>    
+                 <p className="bg-blue-600 text-center">Aqui você poderá separar e organizar seus estudos por disciplina,<br></br> tecnologia e área de maneira períodicamente</p>          
                  <nav className="flex flex-row lg:flex-row flex-column sm:flex-column  flex-wrap gap-5  ml-6  ">
                     <Button label="Login"  onClick={() => mudarCaminho("/login")}/>
                     <Button label="Register"  />
