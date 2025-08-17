@@ -12,6 +12,6 @@ import Rotas from "./routes/rotas"
 
 createRoot(document.getElementById('root')).render(
     <PrimeReactProvider value={{ ripple: true }}>
-    <Rotas />
+        <Rotas />
     </PrimeReactProvider>
 )

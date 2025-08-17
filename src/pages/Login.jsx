@@ -15,12 +15,8 @@ const SectionLogin = styled.section`
 
 
   img{
-   
-    
     height: 200px;
     width: auto;
-
-    padding-left: -100px;
   }
   form {
     background: rgba(35, 56, 110, 0.6);
@@ -35,7 +31,7 @@ const SectionLogin = styled.section`
     
   }
 
-  h1 {
+  h3 {
     text-align: center;
   }
 
@@ -102,10 +98,45 @@ const SectionLogin = styled.section`
     font-size: 0.9rem;
     text-align: center;
   }
+  
+  @media (max-width: 850px) {
+    padding-bottom: 100px;
+    height: 800px;
+    img{
 
-  @media (max-width: 900px) {
+
+      height: 150px;
+      width: auto;
+
+    }
+        .logobox {
+    padding-bottom: 10px !important;
+       }
+  
+  }
+
+  @media (max-width: 600px) {
     height: 100%;
-    padding-bottom: 300px;
+    padding-bottom: 250px;
+
+    .logobox {
+      padding-bottom: 100px !important;
+      margin: 10px;
+      padding: 60px;
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      flex-direction: raw; 
+
+      padding-bottom: 10px !important;
+      img{
+   
+    
+        height: 100px;
+        width: auto;
+
+      }
+
+    }
   }
 `;
 
@@ -133,19 +164,21 @@ const Login = () => {
   return (
     
     <SectionLogin>
-        <div className="flex flex-wrap justify-content-center gap-2 mb-5 md:h-4 ">
-            <div className="flex w-12 justify-content-center h-4">
+        <div className="logobox flex flex-wrap justify-content-center gap-2 bg-gray-400 p-1 rounded-mdborder-red-100" >
+            <div className="flex justify-content-center  ">
                 <img  src={imgLogin} alt="imagem login"   className="justify-content-center" />
             </div>
-            <button type="submit" className="w-5 mx-4 button_mod">Login</button>
-            <button type="submit" className="w-5 mx-4 button_mod">Registrar</button>
+            <div className=" flex flex-column gap-3 lg:w-6 xl:w-6 justify-content-center">
+              <button type="submit" className="w-12  button_mod ">Login</button>
+              <button type="submit" className="w-12  button_mod">Registrar</button>
+            </div>
          </div>
 
         
       <form onSubmit={handleSubmit}>
        
        
-        <h1>Acesse o sistema</h1>
+        <h3>Bem Vindo de volta, acesse o sistema ou se registre caso seja novo aqui</h3>
 
         {error && <div className="error-message">{error}</div>}
 

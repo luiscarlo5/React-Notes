@@ -11,19 +11,15 @@ const SectionLogin = styled.section`
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #001013ff;
+    background-color: #00030aff;
 
 
   img{
-   
-    
     height: 200px;
     width: auto;
-
-    padding-left: -100px;
   }
   form {
-    background: rgba(50, 167, 69, 0.6);
+    background: rgba(35, 56, 110, 0.6);
     padding: 2rem;
     border-radius: 12px;
     display: flex;
@@ -35,7 +31,7 @@ const SectionLogin = styled.section`
     
   }
 
-  h1 {
+  h3 {
     text-align: center;
   }
 
@@ -68,7 +64,7 @@ const SectionLogin = styled.section`
   }
 
   button {
-    background-color: #0be73bff;
+    background-color: #0b96e7ff;
     color: white;
     border: none;
     border-radius: 8px;
@@ -102,10 +98,50 @@ const SectionLogin = styled.section`
     font-size: 0.9rem;
     text-align: center;
   }
+  
+  @media (max-width: 850px) {
+    padding-bottom: 100px;
+    height: 800px;
+    img{
+
+
+      height: 150px;
+      width: auto;
+
+    }
+        .logobox {
+    padding-bottom: 10px !important;
+       }
+  
+  }
+
+  @media (max-width: 600px) {
+    height: 100%;
+    padding-bottom: 250px;
+
+    .logobox {
+      padding-bottom: 100px !important;
+      margin: 10px;
+      padding: 60px;
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      flex-direction: raw; 
+
+      padding-bottom: 10px !important;
+      img{
+   
+    
+        height: 100px;
+        width: auto;
+
+      }
+
+    }
+  }
 `;
 
 // Component
-const Register = () => {
+const Login = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -128,43 +164,31 @@ const Register = () => {
   return (
     
     <SectionLogin>
-
+        <div className="logobox flex flex-wrap justify-content-center gap-2 bg-gray-400 p-1 rounded-mdborder-red-100" >
+            <div className="flex justify-content-center  ">
+                <img  src={imgLogin} alt="imagem login"   className="justify-content-center" />
+            </div>
+            <div className=" flex flex-column gap-3 lg:w-6 xl:w-6 justify-content-center">
+              <button type="submit" className="w-12  button_mod ">Login</button>
+              <button type="submit" className="w-12  button_mod">Registrar</button>
+            </div>
+         </div>
 
         
       <form onSubmit={handleSubmit}>
        
        
-        <h1>Seja Bem-Vindo </h1>
+        <h3>Bem Vindo de volta, acesse o sistema ou se registre caso seja novo aqui</h3>
 
         {error && <div className="error-message">{error}</div>}
 
         <div className="input-group">
-          
-          <input
-            type="text"
-            placeholder="Nome"
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)}
-          />
-        </div>
-
-        <div className="input-group">
-          
+          <FaUser className="icon" />
           <input
             type="email"
             placeholder="E-mail"
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
-          />
-        </div>
-
-        <div className="input-group">
-          <FaLock className="icon" />
-          <input
-            type="password"
-            placeholder="Senha"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
           />
         </div>
 
@@ -184,4 +208,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;
